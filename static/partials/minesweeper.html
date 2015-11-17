@@ -1,0 +1,57 @@
+<style>
+table.gdtable {
+    border: 3px;
+}
+
+td.gdtd {
+    padding: 1px;
+    background-color: #444444;
+}
+
+.gd {
+    width: 3em;
+    height: 3em;
+}
+
+.gd-hidden {
+    border: outset;
+}
+
+.gd-mine {
+    border: none;
+}
+
+.gd-show {
+    border: none;
+}
+
+.gd-show-mine {
+    border: none;
+    background-color: red;
+}
+
+.gd-show-missed {
+    border: none;
+    background-color: yellow;
+}
+
+.smiley {
+    font-size: 3em;
+    font-weight: bold;
+}
+</style>
+<h1>Minesweeper</h1>
+<div>
+    <table class="gdtable">
+        <tr ng-repeat="n in range()">
+            <td ng-repeat="m in range()" class="gdtd">
+                <button ng-class="cf(state[n][m])" ng-click="reveal(n, m);" ng-bind="ct(state[n][m], n, m)">
+                </button>
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <button class="smiley btn btn-warning" ng-click="endmame();"><i class="fa fa-unlock"></i></button>
+    <button class="smiley btn btn-info" ng-click="reinit();"><i class="fa fa-refresh"></i></button>
+    <b ng-bind="alive"></b>
+</div>

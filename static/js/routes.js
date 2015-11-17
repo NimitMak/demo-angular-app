@@ -35,4 +35,11 @@ angular.module('DemoApp').config(['$routeProvider', '$locationProvider', functio
                 reloadOnSearch: false
             }
         )
+        .when(
+            "/minesweeper", {
+                templateUrl: "partials/minesweeper.html",
+                controller: "MineSweeperController",
+                reloadOnSearch: false
+            }
+        )
 }]);
