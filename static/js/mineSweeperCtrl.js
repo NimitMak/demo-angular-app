@@ -91,7 +91,6 @@ controller('MineSweeperController', function($scope, $window) {
                 }
             }
         }
-
         if (missed) {
             $scope.pwnd();
         } else {
