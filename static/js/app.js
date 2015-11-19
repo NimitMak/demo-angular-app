@@ -1,1 +1,1 @@
-angular.module('DemoApp', ['ngRoute']);
+var employeeDashboardApp = angular.module('DemoApp', ['ngRoute', 'ngResource']);

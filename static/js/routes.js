@@ -42,4 +42,11 @@ angular.module('DemoApp').config(['$routeProvider', '$locationProvider', functio
                 reloadOnSearch: false
             }
         )
+        .when(
+            "/employee", {
+                templateUrl: "partials/employee_details.html",
+                controller: "EmployeeDashboardController",
+                reloadOnSearch: false
+            }
+        )
 }]);
